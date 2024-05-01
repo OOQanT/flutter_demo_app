@@ -25,7 +25,7 @@ class CustomTextFormField extends StatelessWidget {
 
     final baseBorder = OutlineInputBorder( // 밑줄이 없는 보더
         borderSide: BorderSide(
-          color: Colors.white,//INPUT_BORDER_COLOR,
+          color: Colors.white, // 보더라인 색
           width: 1.0,
         )
     );
@@ -35,7 +35,7 @@ class CustomTextFormField extends StatelessWidget {
     );
 
     return TextFormField(
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.white), // 입력되는 글자색
       cursorColor: Colors.white,
       obscureText: obscureText,
       autofocus: autofocus, // 화면으로 들어왔을 때 자동으로 포커스 되는 설정
@@ -47,7 +47,7 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         errorText: errorText,
         hintStyle: TextStyle( // 힌트 텍스트 스타일
-            color: Colors.white,
+            color: Colors.white, // 힌트 텍스트 색
             fontSize: 14.0
         ),
         border:baseBorder,

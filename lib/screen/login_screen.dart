@@ -129,8 +129,9 @@ class _LoginScreenState extends State<LoginScreen> {
       print('refreshToken: $refreshToken');
       print('accessToken: $accessToken');
 
-      Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => HomeScreen())
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (_) => HomeScreen()),
+              (route) => false
       );
     }catch(e){
       ScaffoldMessenger.of(context).showSnackBar(
